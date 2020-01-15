@@ -17,7 +17,6 @@ class App extends Component {
     const { endpoint } = this.state;
     const socket = socketIOClient(endpoint);
     socket.on("hello", data => {
-      console.log(data);
       this.setState({
         response: data
       });
@@ -28,7 +27,7 @@ class App extends Component {
     return (
       <div style={{ textAlign: "center" }}>
         {response ? (
-          <p>The temperature in Florence is: {response} °F</p>
+          <p>Here is the response: {response} °F</p>
         ) : (
           <p>Loading...</p>
         )}

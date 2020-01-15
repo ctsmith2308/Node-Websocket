@@ -25,7 +25,7 @@ io.on("connection", socket => {
 });
 
 const getApiAndEmit = socket => {
-  socket.emit("hello", "can you hear me?", 1, 2, "abc");
+  socket.emit("Hello can you hear me?");
   // try {
   //   const res = await axios.get(
   //     "https://api.darksky.net/forecast/b975dcca464db237ae1a6515a667ab62/37.8267,-122.4233"
